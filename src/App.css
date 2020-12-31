@@ -1,0 +1,278 @@
+*{
+  border:0;
+  padding:0;
+  margin: 0;
+}
+.App {
+  text-align: center;
+  font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial","sans-serif";
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.login,.signup{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(1,201,245,1) 0%, rgba(25,149,237,1) 51%, rgba(33,46,217,1) 100%);
+}
+.signup form{
+  height: 650px;
+}
+.login h1,.signup h1{
+  color:rgb(112, 112, 112);
+  width:fit-content;
+}
+form{
+  background-color:white;
+  text-align: center;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width:500px;
+  height: 650px;
+  border-radius: 5px;
+}
+.dashboard{
+  display:flex;
+  height: 100vh;
+}
+
+.login form .avatar{
+  width:125px;
+  height: 125px;
+  border-radius: 50%;
+  background-image: url("./components/resources/default-avatar.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.signup form button, .login form button {
+  font-size:1em;
+}
+.messages {
+  width: 100%;
+  margin-left: 30%;
+  /* background-color: yellow; */
+}
+
+.send-box{
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0px -5px 5px -4px #cacaca;
+  width:70%;
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding:5px;
+  background-color:rgb(255, 255, 255);
+}
+
+.send-button-box {
+  display: flex;
+  /* width: 30%; */
+  margin: 0% 15px 0% 15px;
+}
+
+#send-icon{
+  width:50px;
+  height: 50px;
+}
+
+.profile-header{
+  background-color:white;
+  display:flex;
+  height: 100px;
+  padding: 10px;
+  box-shadow: 0px 5px 5px -4px #cacaca;
+  position:fixed;
+  width: 70%
+}
+.profile-header .profile_details{
+  display: flex;
+  width: 55%;
+}
+.profile-header .profile_details .icon{
+  width:100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: url("https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4.png");
+  background-position: center;
+  background-size: cover;
+}
+.profile-header .profile_details .name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 25px 0 25px;
+}
+.profile-header .comm-icons{
+  display:flex;
+  justify-content: flex-end;
+  width: 45%;
+}
+#call-icon,#video-call-icon,#add-person-icon{
+  width: 50px;
+  height: 50px;
+  margin: 0 15px 0 15px;
+}
+
+
+.my-profile{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border: solid 0.1px #cacaca;
+  border-left: none;
+  border-top: none;
+  height: 75px;
+}
+.my-profile h1{
+  margin: 10px;
+}
+
+.my-profile-icon{
+  align-self: flex-start;
+  margin: 12.5px;
+  width:50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url("https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-position: center;
+  background-size: cover;
+}
+.my-profile-action-icons{
+  display: flex;
+  justify-content: flex-end;
+  width:75%;
+}
+.user-collection{
+  border: solid 0.1px #cacaca;
+  border-left: none;
+  border-top: none;
+  height: auto;
+  overflow: scroll;
+}
+.user-icon{
+  width:75px;
+  height: 75px;
+  border-radius: 50%;
+  background-image: url("https://static.jobscan.co/blog/uploads/linkedin-profile-picture.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.user-collection-item{
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding:15px;
+  border: 1px solid #e6e6e6;
+  border-left: 0;
+  border-right: 0;
+  border-top: none;
+}
+.user-collection-item p{
+  font-size: 24px;
+}
+.chat-box{
+  background-color: #cccccc63;
+  min-height: 85vh;
+  padding: 150px 5% 100px;
+  display:flex;
+  flex-direction: column;
+}
+.sender{
+  background-color: #3367ea;
+  align-self: flex-end;
+  border-radius: 50px;
+  padding:15px;
+  margin: 15px  0px 15px 0px; 
+  max-width:35%;
+  color:white;
+}
+.receiver{
+  background-color: #a912a7;
+  align-self: flex-start;
+  padding:15px;
+  margin: 15px  0px 15px 0px; 
+  border-radius: 50px;
+  max-width:35%;
+  color:white;
+}
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
+}
+
+.friend-request{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width:100%;
+}
+.friend-request-item{
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color:rgb(49, 49, 49);
+  border-radius: 5px;
+  width:100%;
+  border: 1px solid #e6e6e6;
+  margin: 5px;
+}
+
+.friend-request-item button{
+  background-color:#345def;
+  padding: 10px 25px 10px 25px;
+  border-radius: 5px;
+  color:white;
+}
+.friend-request-item .decline-button{
+  background-color: white;
+  color:#345def;
+  border: 1px solid #345def;
+}
+.user-collection-item-af{
+  display:flex;
+  justify-content: space-around;
+  font-family: 24px;
+  align-items: center;
+  padding:15px;
+  border: 1px solid #e6e6e6;
+  border-left: 0;
+  border-right: 0;
+  border-top: none;
+}
+
+.add-friend{
+  background-color: #345def;
+  color:white;
+  padding: 5px 15px 5px 15px;
+  border-radius: 5px;
+}
+
